@@ -33,9 +33,7 @@ body {
         background-color: rgb(15, 14, 14);
 
     }
-    #first:hover{
-        border-right: 1px solid rgb(83, 195, 218);
-    }
+    
     #btn{
         box-shadow: rgba(6, 4, 4, 0.901) 0px 10px 20px, rgba(0, 0, 0, 0.861) 0px 6px 6px;
 
@@ -391,6 +389,11 @@ const box = document.querySelector("#box")
 
 
 const getweather= async()=>{
+
+    
+    const city1= document.getElementById('city')
+
+    city1.blur()
     const city= document.getElementById('city').value
 const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=362d956f017ce9449d81bf09723b2f6f&units=metric`)
 const data = await res.json()
