@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<style>
+
+body {
+    background-color: rgb(19, 18, 18);
+
+  overflow-x: hidden; /* Hide scrollbars */
+}
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    #first{
+        transition: 0.8s ease-in-out;
+        height: 100vh;
+        background-color: rgb(19, 18, 18);
+        
+    }
+    #second{
+    box-shadow: rgba(94, 230, 219, 0.362) 0px 2px 1px, rgba(47, 118, 130, 0.291) 0px 4px 2px, rgba(38, 79, 98, 0.235) 0px 8px 4px, rgba(40, 90, 104, 0.164) 0px 16px 8px, rgba(4, 37, 40, 0.14) 0px 32px 16px;
+
+        height: 100vh;
+        background-color: rgb(15, 14, 14);
+
+    }
+    #first:hover{
+        border-right: 1px solid rgb(83, 195, 218);
+    }
+    #btn{
+        box-shadow: rgba(6, 4, 4, 0.901) 0px 10px 20px, rgba(0, 0, 0, 0.861) 0px 6px 6px;
+
+        margin-top: -3px;
+        padding: 14px;
+        border-radius: 30px 0px 0px 30px;
+        background-color: black;
+        height: 60px;
+color: aliceblue;
+        border: none;
+        outline: none;
+        margin-right: -8px;
+    }
+    #btn2{
+        box-shadow: rgba(6, 4, 4, 0.937) 0px 10px 20px, rgba(0, 0, 0, 0.87) 0px 6px 6px;
+
+        margin-top: -3px;
+        padding: 14px;
+        border-radius: 0px 30px 30px 0px;
+        background-color: black;
+        height: 60px;
+color: aliceblue;
+        border: none;
+        outline: none;
+        /* margin-right: -8px; */
+
+    }
+    .maininput{
+        justify-content: center;
+        display: flex;
+        margin-top: 50px;
+    }
+    #city{
+
+        box-shadow: rgba(6, 4, 4, 0.929) 0px 10px 20px, rgba(0, 0, 0, 0.877) 0px 6px 6px;
+        font-family: serif;
+        /* font-weight: bold; */
+font-size: 30px;
+        color: white;
+margin-top: -2px;
+        background-color: black;
+        height: 60px;
+        width: 290px;
+        border: none;
+        outline: none;
+    }
+
+
+#mainimg{
+    height: 400px;
+    width: 400px;
+}
+
+#weather{
+    box-shadow: rgba(14, 13, 13, 0.956) 0px 19px 38px, rgba(0, 0, 0, 0.592) 0px 15px 12px;
+
+    font-weight: lighter;
+    font-family: serif;
+    color: white;
+    font-size: 90px;
+}
+.card{
+
+    box-shadow: rgba(14, 13, 13, 0.956) 0px 19px 38px, rgba(0, 0, 0, 0.592) 0px 15px 12px;
+    /* box-shadow: rgba(6, 4, 4, 0.571) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; */
+
+transition: 0.3s ease-in-out;
+    border-radius: 15px;
+    width: 300px;
+    height: 300px;
+}
+.card:hover{
+    margin-top: -15px;
+    border: 1px solid rgb(65, 162, 164);
+}
+.cardvalue{
+    font-size: 60px;
+    font-weight: lighter;
+    color: rgb(48, 195, 168);
+}
+#hide{ 
+    padding: 20px;
+    border: 1px solid rgb(32, 172, 174);
+    font-family: serif;
+    font-size: 30px;
+    margin-top: 150px;
+    text-transform: capitalize;
+    color: white;
+}
+
+#bottom{ 
+    /* box-shadow: rgba(6, 4, 4, 0.571) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; */
+
+    padding: 20px;
+    /* border-bottom: 1px solid rgb(32, 172, 174); */
+}
+
+@media only screen and (max-width: 600px) {
+
+    #hide{
+    margin-top: 150px;
+    text-transform: capitalize;
+    color: white;
+}
+    body {
+  overflow-x: hidden; /* Hide scrollbars */
+}
+
+    #day{
+        padding-bottom: 50px;
+    }
+#first{
+    height: 100%;
+    padding-bottom: 40px;
+}
+#second{
+    height: 100%;
+    width: 100%;
+}
+
+    #btn{
+        margin-top: -3px;
+        padding: 14px;
+        height: 51px;
+
+    }
+    #btn2{
+/* margin-top: 0.01px;         */
+        padding: 14px;
+        height: 51px;
+
+    }
+
+
+    #mainimg{
+        height: 300px;
+        width: 300px;
+    }
+    
+    #city{
+font-size: 30px;
+        color: white;
+margin-top: -2px;
+        background-color: black;
+        height: 50px;
+        width: 200px;
+        border: none;
+        outline: none;
+    }
+
+
+    #weather{
+    font-weight: lighter;
+    font-family: serif;
+    color: white;
+    font-size: 60px;
+}
+
+
+.card{
+
+    box-shadow: rgba(94, 230, 219, 0.362) 0px 2px 1px, rgba(47, 118, 130, 0.291) 0px 4px 2px, rgba(38, 79, 98, 0.235) 0px 8px 4px, rgba(40, 90, 104, 0.164) 0px 16px 8px, rgba(4, 37, 40, 0.14) 0px 32px 16px;
+
+    border-radius: 0;
+    margin-top: 30px;
+   width: 100%;
+    height: 300px;
+}
+    #bottom{
+        padding: 20px;
+        border-bottom: none;
+    }
+
+
+}
+
+.cardvalue{
+border-radius: 10px;
+    padding: 5px;
+    box-shadow: rgba(14, 13, 13, 0.956) 0px 19px 38px, rgba(0, 0, 0, 0.592) 0px 15px 12px;
+
+}
+
+
+</style>
+</head>
+<body " >
+
+
+
+
+    <div class="main">
+        <div class="row">
+            <div id="first"  class="col-md-4 text-center shadow-lg  text-danger">
+              
+              
+                <div class="maininput">
+    <div id="btn" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-search fw-400 p-1 " viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+        </div>
+
+                    <input required placeholder="Search for place" id="city" onchange="   getweather(); "  type="text"> 
+
+
+                    <div id="btn2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-geo-alt-fill pb-1 " viewBox="0 0 16 16">
+                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                          </svg>
+            
+                </div>
+
+
+
+            </div>
+
+
+
+<img id="mainimg" style="display: none;"  src="" alt="">
+    <h1 id="weather" > 
+     </h1>
+     
+     <h6 id="hide" >Seach big cities like mumbai delhi goa etc.
+        <br>
+        Please do not search  town and small cities.
+     </h6>
+     
+
+     <div id="bottom"  class="row  justify-content-center">
+        <h3 id="displaycity" style="font-family: serif;" class="fs-1 col-3  text-light"></h3>
+        <h3 id="day"style="font-family: serif;" class="col-9 fs-1 text-end text-light"></h3>
+</div>
+
+            </div>
+
+
+            
+            <div id="second" class="col-md-8 pt-md-5 ">
+
+                <div style="display: none;" id="box">
+
+<div class="row mt-md-5  justify-content-evenly ">
+<div  class="card col-md-3 bg-dark text-light "> <h3 class="p-3  text-uppercase" style="font-family: serif;">wind status</h3>
+    <h1 id="wind"  class="cardvalue text-center" ></h1>
+    
+    <div class="row justify-content-center">
+    <img class="text-center  text-primary" height="150px "  width="150px" src="wind2.svg" alt="">
+</div> 
+</div>
+<div   class="card col-md-3 bg-dark text-light ">
+    <h3 class=" cardval1 p-3  text-uppercase" style="font-family: serif;" >visibility</h3>
+
+    <h1  class="cardvalue text-center" id="visibility"  ></h1>
+    <div class="row justify-content-center ">
+    <img class="text-center  text-primary" height="120px "  width="120px" src="visi.svg" alt="">
+</div>
+</div>
+<div class="card col-md-3 bg-dark text-light ">
+   
+    <h3 class="p-3  text-uppercase" style="font-family: serif;">Humidity</h3>
+
+    <h1  class="cardvalue text-center" id="humidity"  ></h1>
+    <div class="row justify-content-center ">
+        <img  height="120px "   width="120px" src="humidity.svg" alt="">
+    
+</div>
+
+</div>
+</div>
+<div class="row mt-md-5  justify-content-evenly ">
+
+    <div class="card col-md-3 bg-dark text-light ">
+
+        <h3 class="p-3  text-uppercase"style="font-family: serif;" >temp fell like:</h3>
+
+        <h1  class="cardvalue text-center" id="tempfell"  ></h1>
+        <div class="row justify-content-center ">
+            <img  height="120px "   width="120px" src="tempfell.svg" alt="">
+        
+    </div>
+    </div>
+    
+    <div class="card col-md-3 bg-dark text-light ">
+
+        <h3 class="p-3  text-uppercase" style="font-family: serif;">sunrise time</h3>
+
+        <h1  class="cardvalue text-center" id="sunrise"  ></h1>
+        <div class="row justify-content-center ">
+            <img  height="120px "   width="120px" src="sunrise.svg" alt="">
+        
+    </div>
+    
+    
+    </div>
+
+    <div  class="card col-md-3 bg-dark text-light ">
+
+        <h3 class="p-3  text-uppercase" style="font-family: serif;  ">sunset time</h3>
+
+        <h1  class="cardvalue text-center" id="sunset"  ></h1>
+        <div class="row justify-content-center ">
+        <img  height="130px"   style="width: 130px;" src="sunset1.png" alt="">
+    </div>
+    
+
+
+    </div>
+   
+</div>
+
+    </div>
+
+    </div>
+</div>
+    
+    </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+<script>
+// const getweather=()=>{
+//     const city = document.querySelector("#city").value
+//  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=362d956f017ce9449d81bf09723b2f6f&units=metric`)
+// .then((res)=>res.json())
+// .then((data)=>{
+//     let temp = data.main.temp
+//     weather.innerHTML=data.main.temp
+// }).catch((error)=>{
+//     console.log(error);
+// })
+
+const weather = document.querySelector('#weather')
+    const city= document.getElementById('city').value
+    const mainimg = document.querySelector('#mainimg') 
+    const displaycity= document.querySelector('#displaycity')
+const wind = document.querySelector('#wind')
+const visibility = document.querySelector("#visibility")
+const sunrise = document.querySelector("#sunrise")
+const sunset= document.querySelector("#sunset")
+const humidity= document.querySelector("#humidity")
+const tempfell= document.querySelector("#tempfell")
+const box = document.querySelector("#box")
+
+
+
+const getweather= async()=>{
+    const city= document.getElementById('city').value
+const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=362d956f017ce9449d81bf09723b2f6f&units=metric`)
+const data = await res.json()
+document.getElementById('hide').style.display="none"
+
+weather.innerHTML=data.main.temp
+
+
+
+
+
+
+
+
+
+
+
+
+weather.innerHTML+="&#8451;"
+displaycity.innerHTML=data.name
+tempfell.innerHTML=data.main.feels_like+"&#8451;"
+box.style.display="block"
+mainimg.style.display="block"
+wind.innerHTML=data.wind.speed+"/km"
+visibility.innerHTML=data.visibility/1000+"km"
+let unix =data.sys.sunrise;
+let date = new Date(unix*1000);
+sunrise.innerHTML=date.getHours()
+sunrise.innerHTML+=":" + date.getMinutes() +"min"
+humidity.innerHTML=data.main.humidity
+let unix1 =data.sys.sunset;
+let date1 = new Date(unix1*1000);
+sunset.innerHTML=date1.getHours()
+sunset.innerHTML+=":" + date1.getMinutes() +"min"
+
+
+
+
+
+if(data.weather[0].main=="Clouds"){
+    mainimg.src="animated/cloudy-day-1.svg"
+    let audio = new Audio("cloudaudio.mp3");
+    audio.play()    
+}
+if(data.weather[0].main=="Rain"){
+
+    mainimg.src="animated/rainy-6.svg"
+
+    let audio = new Audio("rain.mp3");
+    audio.play()    
+}
+if(data.weather[0].main=="Clear"){
+//   "  21"&&"22"&&"23"&&"1" && "2"&&"3"&&"4"&&"5"  && "18"&&"19" && "20"
+
+let audio = new Audio("sunnyday.mp3");
+    audio.play()
+
+const a = new Date()
+    console.log(a.getHours());
+if(a.getHours()>18||a.getHours()<6   ){
+    mainimg.src="animated/night.svg"
+}else{
+    mainimg.src="animated/day.svg"
+
+}
+
+
+
+}
+
+if(data.weather[0].main=="Thunder"){
+    mainimg.src="animated/thunder.svg"
+
+    let audio = new Audio("thunder.mp3");
+    audio.play()
+
+}
+if(data.weather[0].main=="Haze"){
+    mainimg.src="animated/cloudy.svg"
+
+    let audio = new Audio("sunnyday.mp3");
+    audio.play()
+
+}
+
+
+
+var a = new Date();
+        var weekdays = new Array(7);
+        weekdays[0] = "Sunday";
+        weekdays[1] = "Monday";
+        weekdays[2] = "Tuesday";
+        weekdays[3] = "Wednesday";
+        weekdays[4] = "Thursday";
+        weekdays[5] = "Friday";
+        weekdays[6] = "Saturday";
+        var r = weekdays[a.getDay()];
+        document.getElementById("day").innerHTML = a.getDate();
+         document.getElementById("day").innerHTML += "  "+  r;
+
+        document.getElementById("imgvalue").innerHTML=a.getHours()
+        document.getElementById("imgvalue").innerHTML+=":" + a.getMinutes()
+        
+
+}
+
+
+
+
+// console.log(temp);
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+</html>
